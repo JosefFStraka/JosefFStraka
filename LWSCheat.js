@@ -19,7 +19,7 @@ for (var i = 0;i < selectboxs.length;i++) {
   const options = box.options;
   var rightOption = -1;
   for (var j = 0; j < options.length; j++) {
-    if (options[j].outerHTML.includes('value="right"')) {
+    if (options[j].value == true) {
       rightOption = j;
       options.selectedIndex = j;
       break;
