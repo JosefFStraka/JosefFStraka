@@ -25,10 +25,9 @@ for (var i = 0;i < selectboxs.length;i++) {
       break;
     }
   }
-
-  if (rightOption == -1) {
+  /*if (rightOption == -1) {
         cosole.log("couldnt wind right answer for selectobox#" +  i);
-  }
+  }*/
 }
 
 //drag & drop
