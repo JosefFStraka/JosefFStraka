@@ -43,7 +43,6 @@ for (let i = 0; i < contenidoaguardar.length; i++) {
             let drop_el = document.getElementById("dropdiv"+j);
             drag_el.style.top = drop_el.style.top;
             drag_el.style.left = drop_el.style.left;
-            console.log("dragablediv"+i, "dropdiv"+j)
         }
     }
 }
