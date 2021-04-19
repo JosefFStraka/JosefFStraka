@@ -11,7 +11,8 @@ for (let i = 0; i < selectabledivs.length; i++) {
 
 //editablediv
 for (let i = 0; i < editabledivs.length; i++) {
-    editabledivs[i].innerText = contenidoaguardar[i][0]
+    let idnum = editabledivs[i].id.replace("textbox","")
+    editabledivs[i].innerText = contenidoaguardar[idnum][0];
 }
 
 //selectbox
