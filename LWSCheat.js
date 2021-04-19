@@ -1,3 +1,4 @@
+console.clear()
 console.log("%c¯\\_(ツ)_/¯", "font-size:2em;color:red;background:black;border:1px solid yellow;padding:0.5em")
 let selectboxs = document.querySelectorAll(".selectbox")
 let editabledivs = document.querySelectorAll(".editablediv")
