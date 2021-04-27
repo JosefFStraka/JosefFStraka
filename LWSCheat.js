@@ -57,5 +57,6 @@ for (let i = 0; i < joindivs.length; i+=2) {
     document.getElementById("elsvgdefinitivo").innerHTML += lineStr.split('#').join('"');
 }
 comprobarRespuestas(1)
+respuestascomprobadas = 0
 console.log(`${pnt}/10 points!`)
 mostrarcapafinish()
