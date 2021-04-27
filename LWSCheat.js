@@ -3,6 +3,7 @@ console.log("%c¯\\_(ツ)_/¯", "font-size:2em;color:red;background:black;border
 let selectboxs = document.querySelectorAll(".selectbox")
 let editabledivs = document.querySelectorAll(".editablediv")
 let selectabledivs = document.querySelectorAll(".selectablediv")
+let joindivs = document.querySelectorAll(".joindiv")
 
 //selectabledivs
 for (let i = 0; i < selectabledivs.length; i++) {
@@ -47,4 +48,18 @@ for (let i = 0; i < contenidoaguardar.length; i++) {
             drag_el.style.left = drop_el.style.left
         }
     }
+}
+
+//join - lines
+document.getElementById("elsvgdefinitivo").innerHTML = ""
+let startId = parseInt(joindivs[0].id.split("joindiv").join(""))
+for (let i = 0; i < joindivs.length; i+=2) {
+    let rndX = (Math.random()-0.5) * 10
+    let rndY = (Math.random()-0.5) * 20
+    let el1 = joindivs[i] //document.getElementById("joindiv"+(startId + i))
+    let el2 = joindivs[i+1]//document.getElementById("joindiv"+(startId + i + 1))
+    let lineStr = `<line x1=#${el1.offsetLeft+el1.offsetWidth/2+rndX}# y1=#${el1.offsetTop+el1.offsetHeight/2+rndY}# x2=#${el2.offsetLeft+el2.offsetWidth/2+rndX}# y2=#${el2.offsetTop+el2.offsetHeight/2+rndY}# stroke=#darkblue# stroke-width=#5#/>`
+    contenidorellenado[startId + i][5]     = lineStr
+    contenidorellenado[startId + i + 1][5] = lineStr
+    document.getElementById("elsvgdefinitivo").innerHTML += lineStr.split('#').join('"');
 }
