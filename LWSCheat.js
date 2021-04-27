@@ -58,5 +58,8 @@ for (let i = 0; i < joindivs.length; i+=2) {
 }
 comprobarRespuestas(1)
 respuestascomprobadas = 0
+editabledivs.forEach((el)=>{
+    el.setAttribute("contenteditable", "true")
+})
 console.log(`${pnt}/10 points!`)
 mostrarcapafinish()
