@@ -10,13 +10,11 @@ for (let i = 0; i < selectabledivs.length; i++) {
     var id = parseInt(selectabledivs[i].id.replace('selectablediv',''))
     if (contenidoaguardar[id][0] == "select:yes") selectabledivs[i].onclick()
 }
-
 //editablediv
 for (let i = 0; i < editabledivs.length; i++) {
     let idnum = editabledivs[i].id.replace("textbox","")
     editabledivs[i].innerText = contenidoaguardar[idnum][0];
 }
-
 //selectbox
 for (var i = 0;i < selectboxs.length;i++) {
   const box = selectboxs[i]
@@ -29,11 +27,7 @@ for (var i = 0;i < selectboxs.length;i++) {
       break
     }
   }
-  /*if (rightOption == -1) {
-        cosole.log("couldnt wind right answer for selectobox#" +  i);
-  }*/
 }
-
 //drag & drop
 for (let i = 0; i < contenidoaguardar.length; i++) {
     let drag_number = ""
@@ -49,15 +43,14 @@ for (let i = 0; i < contenidoaguardar.length; i++) {
         }
     }
 }
-
 //join - lines
 document.getElementById("elsvgdefinitivo").innerHTML = ""
 let startId = parseInt(joindivs[0].id.split("joindiv").join(""))
 for (let i = 0; i < joindivs.length; i+=2) {
     let rndX = (Math.random()-0.5) * 10
     let rndY = (Math.random()-0.5) * 20
-    let el1 = joindivs[i] //document.getElementById("joindiv"+(startId + i))
-    let el2 = joindivs[i+1]//document.getElementById("joindiv"+(startId + i + 1))
+    let el1 = joindivs[i]
+    let el2 = joindivs[i+1]
     let lineStr = `<line x1=#${el1.offsetLeft+el1.offsetWidth/2+rndX}# y1=#${el1.offsetTop+el1.offsetHeight/2+rndY}# x2=#${el2.offsetLeft+el2.offsetWidth/2+rndX}# y2=#${el2.offsetTop+el2.offsetHeight/2+rndY}# stroke=#darkblue# stroke-width=#5#/>`
     contenidorellenado[startId + i][5]     = lineStr
     contenidorellenado[startId + i + 1][5] = lineStr
