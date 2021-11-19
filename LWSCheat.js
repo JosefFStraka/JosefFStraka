@@ -8,7 +8,7 @@ let joindivs = document.querySelectorAll(".joindiv")
 //selectabledivs
 for (let i = 0; i < selectabledivs.length; i++) {
     var id = parseInt(selectabledivs[i].id.replace('selectablediv',''))
-    if (contenidoaguardar[id][0] == "select:yes") selectabledivs[i].onclick()
+    if (id && contenidoaguardar[id][0] == "select:yes") selectabledivs[i].onclick()
 }
 //editablediv
 for (let i = 0; i < editabledivs.length; i++) {
