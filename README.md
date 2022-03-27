@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Josef Straka</h1>
+<h1 align="center">Hi 👋, I'm Josef František Straka</h1>
 <h3 align="center">Computer science student & reverse engineering enthusiast</h3>
 
 
