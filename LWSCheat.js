@@ -66,3 +66,5 @@ editabledivs.forEach((el)=>{
 })
 console.log(`${pnt}/10 points!`)
 capanotas.style.fontSize = "100px"
+capanotas.style.padding = "20px"
+capanotas.style.color = "green" 
