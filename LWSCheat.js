@@ -1,5 +1,5 @@
 console.clear()
-console.log("%c¯\\_(ツ)_/¯", "font-size:2em;color:red;background:black;border:1px solid yellow;padding:0.5em")
+console.log("%cLiveWorkSheets solver by M4GicPi3#1337", "font-size:1em;color:red;background:black;border:1px solid yellow;padding:0.5em")
 let selectboxs = document.querySelectorAll(".selectbox")
 let editabledivs = document.querySelectorAll(".editablediv")
 let selectabledivs = document.querySelectorAll(".selectablediv")
@@ -8,7 +8,7 @@ let joindivs = document.querySelectorAll(".joindiv")
 //selectabledivs
 for (let i = 0; i < selectabledivs.length; i++) {
     var id = parseInt(selectabledivs[i].id.replace('selectablediv',''))
-    if (id && contenidoaguardar[id][0] == "select:yes") selectabledivs[i].onclick()
+    if (selectabledivs[i].id.endsWith(id) && contenidoaguardar[id][0] == "select:yes") selectabledivs[i].onclick()
 }
 //editablediv
 for (let i = 0; i < editabledivs.length; i++) {
@@ -65,4 +65,4 @@ editabledivs.forEach((el)=>{
     el.setAttribute("contenteditable", "true")
 })
 console.log(`${pnt}/10 points!`)
-mostrarcapafinish()
+capanotas.style.fontSize = "100px"
