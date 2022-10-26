@@ -14,16 +14,19 @@ for (let i = 0; i < selectabledivs.length; i++) {
 for (let i = 0; i < editabledivs.length; i++) {
     let idnum = editabledivs[i].id.replace("textbox","")
     editabledivs[i].innerText = contenidoaguardar[idnum][0];
+    editabledivs[i].onblur();
 }
 //selectbox
 for (var i = 0;i < selectboxs.length;i++) {
   const box = selectboxs[i]
+  const number = Number.parseInt(box.id.replace("selectbox", ""))
   const options = box.options
   var rightOption = -1
   for (var j = 0; j < options.length; j++) {
     if (options[j].value == true) {
       rightOption = j
       options.selectedIndex = j
+      contenidorellenado[number][5] = j;
       break
     }
   }
@@ -40,6 +43,9 @@ for (let i = 0; i < contenidoaguardar.length; i++) {
             let drop_el = document.getElementById("dropdiv"+j)
             drag_el.style.top = drop_el.style.top
             drag_el.style.left = drop_el.style.left
+            let droptop = contenidoaguardar[j][1]
+            let dropleft = contenidoaguardar[j][2]
+            contenidorellenado[i][5] = droptop + "@" + dropleft;
         }
     }
 }
