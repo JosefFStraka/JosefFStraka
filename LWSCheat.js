@@ -76,4 +76,24 @@ editabledivs.forEach((el)=>{
 console.log(`${pnt}/10 points!`)
 capanotas.style.fontSize = "100px"
 capanotas.style.padding = "20px"
-capanotas.style.color = "green" 
+capanotas.style.color = "green"
+
+let confidency_all = 0; let confidency_sum = 0;
+contenidoaguardar.map((e, i) => {
+    if (!contenidorellenado[i][0].startsWith("join") && !contenidorellenado[i][0].startsWith("drag") ) { 
+        confidency_all +=1;
+        if (contenidorellenado[i][0].startsWith("choose")) {
+            if (contenidorellenado[i][5] != "") {
+                confidency_sum += 1;
+            }
+            else { console.log("failed:", contenidorellenado[i], "-", e) }
+        } else {
+            
+            let ok = e[0].includes(contenidorellenado[i][5])
+            if (ok) {confidency_sum += 1;} 
+            else { console.log("failed:", contenidorellenado[i], "-", e) }
+        }
+ 	}
+})
+console.log(`cheaing confidency = ~${Math.floor((confidency_sum/confidency_all)*99.9)}%`)
+console.log("use at your own risk :)")
