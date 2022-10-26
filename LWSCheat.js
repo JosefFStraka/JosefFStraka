@@ -95,5 +95,5 @@ contenidoaguardar.map((e, i) => {
         }
  	}
 })
-console.log(`cheaing confidency = ~${Math.floor((confidency_sum/confidency_all)*99.9)}%`)
+console.log(`cheat confidency = ~${Math.floor((confidency_sum/confidency_all)*99.9)}%`)
 console.log("use at your own risk :)")
