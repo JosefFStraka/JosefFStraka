@@ -14,9 +14,11 @@ for (let i = 0; i < selectabledivs.length; i++) {
 //editablediv
 for (let i = 0; i < editabledivs.length; i++) {
     let idnum = editabledivs[i].id.replace("textbox","")
-    editabledivs[i].innerText = contenidoaguardar[idnum][0];
+    let answer = contenidoaguardar[idnum][0].split("/")[0]
+    editabledivs[i].innerText = arreglarTextoparaguardar(answer);
     editabledivs[i].onblur();
 }
+
 //selectbox
 for (var i = 0;i < selectboxs.length;i++) {
   const box = selectboxs[i]
