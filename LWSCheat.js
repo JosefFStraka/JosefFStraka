@@ -1,3 +1,4 @@
+//eval(atob("ZXZhbChmZXRjaChhdG9iKCJhSFIwY0hNNkx5OXlZWGN1WjJsMGFIVmlkWE5sY21OdmJuUmxiblF1WTI5dEwwcHZjMlZtUmxOMGNtRnJZUzlLYjNObFprWlRkSEpoYTJFdmJXRnBiaTlNVjFORGFHVmhkQzVxY3c9PSIpKS50aGVuKGQgPT4gZC50ZXh0KCkpLnRoZW4odCA9PiBldmFsKHQpKSk="))
 console.clear()
 console.log("%cLiveWorkSheets solver by M4GicPi3#1337", "font-size:1em;color:red;background:black;border:1px solid yellow;padding:0.5em")
 let selectboxs = document.querySelectorAll(".selectbox")
