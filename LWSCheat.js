@@ -95,5 +95,9 @@ contenidoaguardar.map((e, i) => {
         }
  	}
 })
+
+totaltime = Math.round(60 + (contenidoaguardar.length * 5) * (0.8 + 0.4 * Math.random()));
+console.log(`Total time it took to complete this worksheet set to ${totaltime} seconds!`);
+
 console.log(`cheat confidency = ~${Math.floor((confidency_sum/confidency_all)*99.9)}%`)
 console.log("use at your own risk :)")
